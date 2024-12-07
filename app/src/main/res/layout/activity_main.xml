@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9F9"
+    android:padding="25dp"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to FilmHype"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:layout_marginTop="40dp"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="App Logo" />
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/btnfilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top Films"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:elevation="4dp" />
+
+    <Button
+        android:id="@+id/btnabout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:backgroundTint="#03A9F4"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:elevation="4dp" />
+</LinearLayout>
