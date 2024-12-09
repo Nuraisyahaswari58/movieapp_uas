@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F9F9F9">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review dan Ulasan Film"
+        android:textSize="24sp"
+        android:textColor="#FF5722"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textStyle="bold" />
+
+    <!-- Input Review -->
+    <EditText
+        android:id="@+id/etReviewInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tulis review Anda di sini"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="start"
+        android:textColor="#212121"
+        android:textSize="16sp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSubmitReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Review"
+        android:backgroundTint="#8BC34A"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Display Reviews -->
+    <TextView
+        android:id="@+id/tvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ulasan Pengguna:"
+        android:textSize="18sp"
+        android:textColor="#757575"
+        android:paddingTop="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/llReviewsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Reviews will be added dynamically here -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

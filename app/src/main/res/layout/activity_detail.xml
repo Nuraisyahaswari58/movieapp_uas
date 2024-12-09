@@ -1,52 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="#FFFFFF"> <!-- Background putih untuk tampilan bersih -->
+    android:background="#FAFAFA"> <!-- Warna latar lebih lembut -->
 
-    <!-- Gambar Film -->
-    <ImageView
-        android:id="@+id/imageView"
+    <!-- Gambar Film dalam CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewImage"
         android:layout_width="250dp"
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="Movie Image"
-        android:elevation="8dp"
-        android:layout_alignParentTop="true"/>
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="Movie Image" />
+    </androidx.cardview.widget.CardView>
 
     <!-- Nama Film -->
     <TextView
-        android:id="@+id/textViewnama"
+        android:id="@+id/textViewNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
-        android:layout_marginTop="20dp"
+        android:layout_below="@id/cardViewImage"
+        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
-        android:textColor="#212121"
+        android:textColor="#333333"
         android:textStyle="bold"
-        android:textSize="24sp"
-        android:fontFamily="sans-serif-condensed"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center" />
+
+    <!-- Genre -->
+    <TextView
+        android:id="@+id/textViewGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNama"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#666666"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:gravity="center" />
+
+    <!-- Rating -->
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewGenre"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center" />
+
+    <!-- Divider untuk memisahkan deskripsi -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/textViewRating"
+        android:layout_marginTop="16dp"
+        android:background="#DDDDDD" />
 
     <!-- Deskripsi Film -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewnama"
-        android:layout_marginTop="24dp">
+        android:layout_below="@id/textViewRating"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp">
 
         <TextView
-            android:id="@+id/textViewdetail"
+            android:id="@+id/textViewDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#757575"
+            android:textColor="#444444"
             android:textSize="16sp"
-            android:lineSpacingExtra="6dp"
-        android:fontFamily="sans-serif-light"
-        android:padding="16dp"
-        android:gravity="start" />
+            android:lineSpacingExtra="8dp"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:gravity="start" />
     </ScrollView>
+
 </RelativeLayout>

@@ -35,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, About.class);
             startActivity(intent);
         });
+        findViewById(R.id.btnreview).setOnClickListener(v -> {
+            // Tambahkan kode untuk membuka halaman tentang aplikasi di sini
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
 
     }
 }

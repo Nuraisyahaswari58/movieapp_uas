@@ -47,6 +47,20 @@
         android:padding="10dp"
         android:elevation="4dp" />
 
+    <!-- Button untuk Review dan Ulasan Film -->
+    <Button
+        android:id="@+id/btnreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review dan Ulasan Film"
+        android:backgroundTint="#8BC34A"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:elevation="4dp" />
+
     <Button
         android:id="@+id/btnabout"
         android:layout_width="match_parent"
