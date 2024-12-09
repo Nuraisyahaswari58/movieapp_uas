@@ -88,6 +88,7 @@
             android:layout_height="wrap_content"
             android:textColor="#444444"
             android:textSize="16sp"
+            android:justificationMode="inter_word"
             android:lineSpacingExtra="8dp"
             android:fontFamily="sans-serif"
             android:padding="16dp"
